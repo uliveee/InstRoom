@@ -7,6 +7,22 @@
     <title>Instroom</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function digitalClock() {
+         var date = new Date();
+         var hours = date.getHours();
+         var minutes = date.getMinutes();
+         var seconds = date.getSeconds();
+            //* добавление ведущих нулей */
+           if (hours < 10) hours = "0" + hours;
+           if (minutes < 10) minutes = "0" + minutes;
+           if (seconds < 10) seconds = "0" + seconds;
+             document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+             setTimeout("digitalClock()", 1000);
+        }
+       </script>
 </head>
 <body>
     <button id="scrollToTopButton">
@@ -17,6 +33,8 @@
             <span style="color: #F05A00">I</span>nst<br>
             roo<span style="color: #F05A00">m</span></p>
         <p>Время работы: 10:00 - 20:00</p>
+        <div id="id_clock"></div>
+        <script>digitalClock();</script>
         <p>+7 495 120-32-14<br><a href="">Заказать звонок</a></p>
         <div class="header-blocks">
                 <div class="header-item">
@@ -31,11 +49,13 @@
         </div>
     </header>
     <div class="header2">
-        <p>Каталог товаров</p>
-        <p>О компании</p>
-        <p>Акции</p>
-        <p>Хиты сезона</p>
-        <p>Новинки</p>
+        <div class="footer-text1">
+        <a href="">Каталог товаров</a>
+        <a href="">О компании</a>
+        <a href="">Акции</a>
+        <a href="">Хиты сезона</a>
+        <a href="">Новинки</a>
+        </div>
         <div class="header2-icon">
             <img src="pic/inst.png" width="40px">
             <img src="pic/vk.png" width="40px">
@@ -49,11 +69,11 @@
         <div class="header3-img img1">
             <p>DeWALT - Инструмент с настоящим характером</p>
             <form>
-                <button>ПЕРЕЙТИ В КАТАЛОГ</button>
+                <button style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">ПЕРЕЙТИ В КАТАЛОГ</button>
             </form>
 
             <form>
-                <button type="button">></button>
+                <button type="button" >></button>
             </form>
         </div>
         <div class="header3-img img2">
@@ -87,14 +107,14 @@
         <img src="центро.png">
     </div>
     <div>
-        <div>
-            <img src="onas.png" class="about">
+        <div class="about">
+            <img src="onas.png">
             <p class="about-text">О нас</p>
             <p class="about-text1">Торговое или промышленное предприятие, торгово-промышленное объединение предпринимателей, форма организации предприятия, при которой его правосубъектность отличается от правосубъектности лиц, в нем участвующих. 
                 <br><br>Торговое или промышленное предприятие, торгово-промышленное объединение предпринимателей, форма организации предприятия</>
                 
                 <form>
-                    <button class="button-about">ПЕРЕЙТИ В КАТАЛОГ</button>
+                    <button class="button-about" style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">ПЕРЕЙТИ В КАТАЛОГ</button>
                 </form>
         </div>
         
@@ -149,6 +169,8 @@
             </div>
         </div>
     </div>
+    <hr>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5621.717078515765!2d23.863660318638583!3d53.67120265713323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dfd64f8b8552d5%3A0x5c21d66f56d81bb8!2z0KHRgtGA0L7QuNGC0LXQu9GM0L3Ri9C5INCz0LjQv9C10YDQvNCw0YDQutC10YIg0JzQkNCi0JXQoNCY0Jo!5e0!3m2!1sru!2sby!4v1685361913932!5m2!1sru!2sby" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <footer>
         <div class="footer-text">
             <a href="">Малярные товары</a>
@@ -186,15 +208,17 @@
                 </p>
             </div>
         </div>
+        <div id="cookie-note">
+            <p>Мы используем файлы cookies для улучшения работы сайта. Оставаясь на нашем сайте, вы соглашаетесь с условиями
+                использования файлов cookies. Чтобы ознакомиться с нашими Положениями о конфиденциальности и об
+                использовании
+                файлов cookie,
+             <a href="#" target="_blank">нажмите здесь</a>.
+            </p>
+            <button class="button cookie__accept btn btn-primary btn-sm">Я согласен</button>
+        </div>
     </footer>
-    <div id="cookie-note">
-        <p>Мы используем файлы cookies для улучшения работы сайта. Оставаясь на нашем сайте, вы соглашаетесь с условиями
-            использования файлов cookies. Чтобы ознакомиться с нашими Положениями о конфиденциальности и об
-            использовании
-            файлов cookie, <a href="#" target="_blank">нажмите здесь</a>.</p>
-        <button class="button cookie__accept btn btn-primary btn-sm">Я согласен</button>
-    </div>
 </body>
-<script src="button-up.js"></script>
-<script src="cookie.js"></script>
+        <script src="button-up.js"></script>
+        <script src="cookie.js"></script>
 </html>

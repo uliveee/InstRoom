@@ -16,6 +16,7 @@ a:link {
  header{
     width: 100%;
     background-color:#212526;
+    background: linear-gradient(#212526, rgb(71, 70, 70));
 
     display: flex;
     justify-content: space-around;
@@ -249,7 +250,7 @@ footer {
 }
 
 .about{
-   width: 640px;
+   width: 320px;
    height: 480px;
    padding: 80px 970px 80px 15px;
 }
@@ -402,3 +403,19 @@ footer {
 .cookie_accept {
    width: 20%;
 }
+
+.footer-text1 {
+   display: flex;
+   gap: 20px;
+   
+}
+
+.footer-text1 :hover {
+   color: #F05A00;
+}
+
+.footer-text1 a {
+   font-size: 16px;
+   color: white;
+}
+
